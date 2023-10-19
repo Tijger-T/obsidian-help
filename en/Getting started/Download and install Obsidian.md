@@ -43,6 +43,17 @@ If you use Linux, you can install Obsidian in several ways. Follow the instructi
    chmod u+x Obsidian-<version>.AppImage
    ./Obsidian-<version>.AppImage
    ```
+5. To avoid having to recreate or edit a shortcut to the application with every new version, create a symlink with the following command:
+	```bash
+ 	ln Obsidian-<version>.AppImage Obsidian.AppImage
+ 	```
+   then direct your shortcut to the symlink Obsidian.AppImage
+   When installing a new version, first run the following command:
+   ```bash
+   rm Obsidian.AppImage
+   ```
+   then apply the symlink to the new version.
+   This allows you to keep several versions of the installer and switch easily between them simply by deleting and recreating the symlink.
 
 ### Install Obsidian using Flatpak
 
